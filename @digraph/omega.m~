@@ -1,11 +1,7 @@
 function basis = omega(DG, n)
 % Computes the basis of the \Omega_n vector space for this digraph. Returns
 % a cell array of matrices, each representing a generator of this basis.
-% For instance, the vector space "span{1(1 2) - 2(3 4), 4(5 6)}" would be
-% represented by the cell array
-%
-% / [ 1 1 2     [4 5 6 ] \
-% \  -2 3 4 ] ,          /
+% For instance, the vector space span{1(1,2)
 
     aspace = DG.aspace(n);
 
@@ -50,4 +46,3 @@ function basis = omega(DG, n)
         r = r + 1;
     end
 end
-

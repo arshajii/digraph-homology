@@ -12,3 +12,4 @@ function blist = boundarize(aspace)
         blist{i} = core.boundary(aspace(i,:));
     end
 end
+

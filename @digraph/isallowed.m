@@ -10,3 +10,4 @@ function allowed = isallowed(DG, v)
     end
     allowed = true;
 end
+
