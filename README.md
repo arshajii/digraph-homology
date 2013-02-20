@@ -2,7 +2,7 @@ Digraph Homology (Matlab)
 =========================
 
 Computationally determining the dimensions of the homology groups H_n of directed graphs. The notion of homology is formally
-expanded to digraphs in [ref. 1](digraph-homology#references).
+expanded to digraphs in [ref. 1](https://github.com/arshajii/digraph-homology#references).
 
 References
 ----------
