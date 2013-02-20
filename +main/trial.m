@@ -1,4 +1,4 @@
-function run(n, h, dp, autoquit)
+function trial(n, h, dp, autoquit)
 % RUN - Performs a single trial of computing dim H_n for random graphs of
 % given size.
 %
@@ -15,10 +15,10 @@ function run(n, h, dp, autoquit)
 
     switch nargin
         case 2
-            run(n, h, 0.025, 4);
+            main.trial(n, h, 0.025, 4);
             return
         case 3
-            run(n, h, dp, 4);
+            main.trial(n, h, dp, 4);
             return
     end
 
