@@ -14,22 +14,17 @@ function vecs = aspace(DG, n)
         return
     end
 
-    prev = DG.aspace(n-1);
-    nrows = sum(sum(DG.AdjMatrix(prev(:,end),:)));
-    
-    vecs = zeros(nrows, n+1);
+    prev = DG.aspace(n-1);    
+    vecs = zeros(sum(sum(DG.AdjMatrix(prev(:,end),:))), n+1);
     r = 1;
+    
     for row=prev'
         v = 1:len;
         v = v(DG.AdjMatrix(row(end),:));
+        nrows = length(v);
         
-        sub = zeros(length(v), n+1);
-        for i=1:length(v)
-            sub(i,:) = [row' v(i)];
-        end
-        
-        vecs(r:r+size(sub,1)-1,:) = sub;
-        r = r + length(v);
+        vecs(r:r+nrows-1,:) = [repmat(row', nrows, 1) v'];
+        r = r + nrows;
     end
 end
 
