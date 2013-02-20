@@ -20,13 +20,13 @@ function dim = dimker(basis)
         for row=(basis{i}')
             v = row';
             c = v(1);
-            b = boundary(v(2:end));
+            b = core.boundary(v(2:end));
             m(r:r+size(b,1)-1,:) = [b(:,1).*c b(:,2:end)];
             r = r + size(b,1);
         end
         boundarized{i} = m(m(:,1) ~= 0, :);
     end
-        
+    
     nonalloweds = cell(1, sum(cellfun(@(v)size(v,1), boundarized)));  % elements that should cancel out
     r = 1;
     for i=1:length(boundarized)
@@ -49,7 +49,7 @@ function dim = dimker(basis)
     end
     nonalloweds = nonalloweds(1:r-1);
     
-    A = gennull(boundarized, nonalloweds);
+    A = core.gennull(boundarized, nonalloweds);
     dim = size(A, 2) - rank(A);
 end
 

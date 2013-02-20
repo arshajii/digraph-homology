@@ -25,7 +25,7 @@ function run(n, h, dp, autoquit)
     count = 0;
     b = false;  % whether a non-zero dimension been encountered
     for p=0:dp:1
-        dg = g(n, p);
+        dg = core.g(n, p);
         dim = dg.hdim(h);
         
         fprintf('%.3f\t%d\n', p, dim);

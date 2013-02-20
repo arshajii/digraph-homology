@@ -9,6 +9,6 @@ function blist = boundarize(aspace)
     n = size(aspace, 1);
     blist = cell(1, n);
     for i=1:n
-        blist{i} = boundary(aspace(i,:));
+        blist{i} = core.boundary(aspace(i,:));
     end
 end
