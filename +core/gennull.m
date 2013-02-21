@@ -1,9 +1,9 @@
-function mat = gennull(boundarized, nonalloweds)
+function A = gennull(boundarized, nonalloweds)
 % GENNULL Generates the "null" matrix for a certain "boundarized" vector
 % space basis and a cell array of nonallowed terms (terms that should
 % cancel). This function is used in OMEGA and DIMKER.
 
-    mat = zeros(length(nonalloweds), length(boundarized));
+    A = zeros(length(nonalloweds), length(boundarized));
     for i=1:length(nonalloweds)
         v = nonalloweds{i};
         
@@ -21,7 +21,7 @@ function mat = gennull(boundarized, nonalloweds)
                 end
             end
                     
-            mat(i,j) = c;
+            A(i,j) = c;
             generator(logical(covered),:) = [];  % delete covered rows (performance boost)
             boundarized{j} = generator;  % reassign modified matrix
         end
