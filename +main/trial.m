@@ -29,7 +29,7 @@ function result = trial(n, h, dp, autoquit)
     pvals = 0:dp:1;
     result = zeros(length(pvals), 2);
     count = 0;
-    b = false;  % whether a non-zero dimension been encountered
+    b = false;  % whether a non-zero dimension has been encountered
     
     r = 1;
     for p=pvals
