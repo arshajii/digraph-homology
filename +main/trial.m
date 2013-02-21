@@ -1,5 +1,5 @@
-function trial(n, h, dp, autoquit)
-% RUN - Performs a single trial of computing dim H_n for random graphs of
+function result = trial(n, h, dp, autoquit)
+% TRIAL Performs a single trial of computing dim H_n for random graphs of
 % given size.
 %
 % Arguments:
@@ -12,21 +12,31 @@ function trial(n, h, dp, autoquit)
 % autoquit - Number of 0s after initial non-zero dimension after which the
 % trial should automatically end, defaults to 4. A value of -1 will turn
 % off this feature.
+%
+% This function returns the result of the trial in the form of a matrix
+% consisting of rows of length 2, the first elements of which are the
+% p-values, and the second elements of which are the homology dimensions.
 
     switch nargin
         case 2
-            main.trial(n, h, 0.025, 4);
+            result = main.trial(n, h, 0.025, 4);
             return
         case 3
-            main.trial(n, h, dp, 4);
+            result = main.trial(n, h, dp, 4);
             return
     end
 
+    pvals = 0:dp:1;
+    result = zeros(length(pvals), 2);
     count = 0;
     b = false;  % whether a non-zero dimension been encountered
-    for p=0:dp:1
+    
+    r = 1;
+    for p=pvals
         dg = core.g(n, p);
         dim = dg.hdim(h);
+        result(r,:) = [p dim];
+        r = r + 1;
         
         fprintf('%.3f\t%d\n', p, dim);
         
@@ -42,5 +52,6 @@ function trial(n, h, dp, autoquit)
             break
         end
     end
+    result = result(1:r-1,:);
 end
 
