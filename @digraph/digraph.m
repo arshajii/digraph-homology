@@ -1,5 +1,5 @@
 classdef digraph
-% DIGRAPH - Represents a directed graph
+% DIGRAPH Represents a directed graph.
 %
 % Represents a directed graph with a binary adjacency matrix, in which no
 % vertex is connected to itself (i.e. the adjacency matrix has 0s along

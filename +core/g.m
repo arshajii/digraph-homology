@@ -1,6 +1,6 @@
 function dg = g(n, p)
-% G - Creates a "random" directed graph with n nodes and edge-probability
-% p. In other words, this function generates the Erdos-Renyi graph G(n,p).
+% G Creates a "random" directed graph with n nodes and edge-probability p.
+% In other words, this function generates the Erdos-Renyi graph G(n,p).
 
     A = zeros(n, n);
     

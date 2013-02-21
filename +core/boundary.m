@@ -1,5 +1,5 @@
 function result = boundary(v)
-% BOUNDARY - Takes an element of V^n and returns its 'boundary matrix'.
+% BOUNDARY Takes an element of V^n and returns its 'boundary matrix'.
 % For example, for an input of
 %
 % [ 1 2 3 4 ]
