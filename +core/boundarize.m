@@ -7,7 +7,7 @@ function blist = boundarize(aspace)
 % matrix.
 
     n = size(aspace, 1);
-    blist = cell(1, n);
+    blist = cell(n, 1);
     for i=1:n
         blist{i} = core.boundary(aspace(i,:));
     end

@@ -1,1 +1,1 @@
-main.trial(20,2);
+main.trial(20,1);

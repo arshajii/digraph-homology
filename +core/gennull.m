@@ -4,8 +4,8 @@ function A = gennull(boundarized, nonalloweds)
 % cancel). This function is used in OMEGA and DIMKER.
 
     A = zeros(length(nonalloweds), length(boundarized));
-    for i=1:length(nonalloweds)
-        v = nonalloweds{i};
+    for i=1:size(nonalloweds,1)
+        v = nonalloweds(i,:);
         
         for j=1:length(boundarized)
             c = 0;
