@@ -28,9 +28,8 @@ function dim = dimker(basis)
     end
     
     nonalloweds = cell2mat(boundarized);
-    nonalloweds = unique(nonalloweds(:,2:end), 'rows');
     
-    A = core.gennull(boundarized, nonalloweds);
+    A = core.gennull(boundarized, unique(nonalloweds(:,2:end), 'rows'));
     dim = size(A, 2) - rank(A);
 end
 
