@@ -3,7 +3,7 @@ function A = gennull(boundarized, nonalloweds)
 % space basis and a cell array of nonallowed terms (terms that should
 % cancel). This function is used in OMEGA and DIMKER.
 
-    A = zeros(length(nonalloweds), length(boundarized));
+    A = zeros(size(nonalloweds,1), length(boundarized));
     for i=1:size(nonalloweds,1)
         v = nonalloweds(i,:);
         
