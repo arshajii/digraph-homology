@@ -14,19 +14,17 @@ function basis = omega(DG, n)
         return
     end
 
-    boundarized = core.boundarize(DG.aspace(n));
+    boundarized = core.boundarize(aspace);
     
     nonalloweds = cell2mat(boundarized);
     nonalloweds = unique(nonalloweds(:,2:end), 'rows');
     
     X = null(core.gennull(boundarized, nonalloweds(logical(~DG.isallowed(nonalloweds)),:)), 'r');
-    omega_raw = vertcat(aspace);  % no coefficients
-
     basis = cell(1, size(X, 2));
 
     r = 1;
     for col=X
-        elem = [col omega_raw];
+        elem = [col aspace];
         basis{r} = elem(elem(:, 1) ~= 0, :);
         r = r + 1;
     end
