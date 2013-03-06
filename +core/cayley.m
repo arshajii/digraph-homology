@@ -3,7 +3,8 @@ function dg = cayley(d, p)
 
     n = p ^ d;
     group = counter(d, p);
-    gens = group(randperm(n, d),:);
+    %gens = group(randperm(n, d),:);
+    gens = eye(d);
     
     A = zeros(n);
     for i=1:n
@@ -27,19 +28,19 @@ function prod = counter(d, p)
 % row of this matrix represents an element of the basis.
 
     n = p ^ d;
-    v = int16(ones(1, d));
+    v = int16(zeros(1, d));
     prod = zeros(n, d);
     for i=1:n
         prod(i,:) = v;
         if i ~= n
-            v = step(v, p, d);
+            v = step(v, p-1, d);
         end
     end
 end
 
 function next = step(v, k, pos)
     if v(pos) == k
-        v(pos) = 1;
+        v(pos) = 0;
         next = step(v, k, pos - 1);
     else
         v(pos) = v(pos) + 1;
