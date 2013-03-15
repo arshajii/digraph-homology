@@ -1,0 +1,92 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2604,         83]
+NotebookOptionsPosition[      2348,         69]
+NotebookOutlinePosition[      2705,         85]
+CellTagsIndexPosition[      2662,         82]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Generate", " ", "Cayley", " ", "graphs", " ", "for", " ", "symmetric", 
+    " ", "groups"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<cayley_sym-\>\"", "<>", 
+        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.gv\>\""}], ",", 
+       RowBox[{"CayleyGraph", "[", 
+        RowBox[{"SymmetricGroup", "[", "i", "]"}], "]"}], ",", 
+       "\"\<DOT\>\""}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "5"}], "}"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Generate", " ", "Cayley", " ", "graphs", " ", "for", " ", "dihedral", " ",
+     "groups"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<cayley_dih-\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.gv\>\""}], ",", 
+      RowBox[{"CayleyGraph", "[", 
+       RowBox[{"DihedralGroup", "[", "i", "]"}], "]"}], ",", "\"\<DOT\>\""}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQve30Dt/Dc185fvj+H0xXPFxRBqIvLXevBdFiD6t7
+QfQd81eTQXRhWtEWEM2gJbIdRM8u2bwXRAsJBu4D0UkvnA+B6HMdjsdBtOJu
+uU8gepWgMpiWZFgvfwRITxI4qQSiGZcIaYNoj74YHRA965iuGYheMvWFFYi+
+dKgwFEQ/O7khDERvy3gdA6LvhJjHgeiKAxLpIHr2p5Vg+tFdv1wQvfh5TSGI
+fnxkVjWI9rnYVAOiWVZ9bwLRDSENLSC63Xh+D4hO8zg3GUTXmTxbBKJLXjct
+AdEKbmu2g2iLk0/BNACi4rHC
+  "]]
+},
+WindowSize->{958, 628},
+WindowMargins->{{102, Automatic}, {Automatic, 37}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1787, 47, 131, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

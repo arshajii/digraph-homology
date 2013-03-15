@@ -1,0 +1,8 @@
+/* Created by Wolfram Mathematica 9.0 : www.wolfram.com */
+
+digraph {
+	1 [label=""];
+	2 [label=""];
+	1 -> 2;
+	2 -> 1;
+}
