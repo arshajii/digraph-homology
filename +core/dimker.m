@@ -28,8 +28,12 @@ function dim = dimker(basis)
     end
     
     nonalloweds = cell2mat(boundarized);
-    
     A = core.gennull(boundarized, unique(nonalloweds(:,2:end), 'rows'));
-    dim = size(A, 2) - rank(A);
+    
+    if issparse(A)
+        dim = size(null(A,'r'), 2);  % rank does not work for sparse matrices
+    else
+        dim = size(A, 2) - rank(A);
+    end
 end
 
