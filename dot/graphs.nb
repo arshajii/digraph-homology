@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      2604,         83]
-NotebookOptionsPosition[      2348,         69]
-NotebookOutlinePosition[      2705,         85]
-CellTagsIndexPosition[      2662,         82]
+NotebookDataLength[      3418,         93]
+NotebookOptionsPosition[      3162,         79]
+NotebookOutlinePosition[      3519,         95]
+CellTagsIndexPosition[      3476,         92]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,12 +35,13 @@ Cell[BoxData[{
      RowBox[{"Export", "[", 
       RowBox[{
        RowBox[{"\"\<cayley_sym-\>\"", "<>", 
-        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.gv\>\""}], ",", 
-       RowBox[{"CayleyGraph", "[", 
-        RowBox[{"SymmetricGroup", "[", "i", "]"}], "]"}], ",", 
-       "\"\<DOT\>\""}], "]"}], ",", 
+        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.mat\>\""}], ",", 
+       RowBox[{"AdjacencyMatrix", "[", 
+        RowBox[{"CayleyGraph", "[", 
+         RowBox[{"SymmetricGroup", "[", "i", "]"}], "]"}], "]"}]}], "]"}], 
+     ",", 
      RowBox[{"{", 
-      RowBox[{"i", ",", "5"}], "}"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"i", ",", "10"}], "}"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
@@ -52,20 +53,29 @@ Cell[BoxData[{
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{"\"\<cayley_dih-\>\"", "<>", 
-       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.gv\>\""}], ",", 
-      RowBox[{"CayleyGraph", "[", 
-       RowBox[{"DihedralGroup", "[", "i", "]"}], "]"}], ",", "\"\<DOT\>\""}], 
-     "]"}], ",", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.mat\>\""}], ",", 
+      RowBox[{"AdjacencyMatrix", "[", 
+       RowBox[{"CayleyGraph", "[", 
+        RowBox[{"DihedralGroup", "[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+    
     RowBox[{"{", 
-     RowBox[{"i", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBmIQve30Dt/Dc185fvj+H0xXPFxRBqIvLXevBdFiD6t7
-QfQd81eTQXRhWtEWEM2gJbIdRM8u2bwXRAsJBu4D0UkvnA+B6HMdjsdBtOJu
-uU8gepWgMpiWZFgvfwRITxI4qQSiGZcIaYNoj74YHRA965iuGYheMvWFFYi+
-dKgwFEQ/O7khDERvy3gdA6LvhJjHgeiKAxLpIHr2p5Vg+tFdv1wQvfh5TSGI
-fnxkVjWI9rnYVAOiWVZ9bwLRDSENLSC63Xh+D4hO8zg3GUTXmTxbBKJLXjct
-AdEKbmu2g2iLk0/BNACi4rHC
-  "]]
+     RowBox[{"i", ",", "15"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.572374125774867*^9, 3.572374127999016*^9}, {
+   3.572374453277523*^9, 3.572374506239236*^9}, {3.5723746358712263`*^9, 
+   3.572374687319319*^9}, {3.572374947575005*^9, 3.572374968630127*^9}, {
+   3.572375021607984*^9, 3.572375026533334*^9}, {3.572375058122117*^9, 
+   3.57237509804795*^9}, {3.572375440960343*^9, 3.5723754410959063`*^9}, {
+   3.572375805468762*^9, 3.5723758302832727`*^9}, {3.57237589658252*^9, 
+   3.5723759068923683`*^9}, {3.5723759854304934`*^9, 
+   3.5723760232682667`*^9}, {3.572376235555032*^9, 3.572376245524646*^9}, {
+   3.572376295356532*^9, 3.572376305729109*^9}, {3.5723763767734947`*^9, 
+   3.572376381310865*^9}, {3.5723764264645853`*^9, 3.572376459903276*^9}, {
+   3.572376540836534*^9, 3.572376548088049*^9}, {3.572376599739504*^9, 
+   3.572376612010315*^9}, {3.57237667697504*^9, 3.5723767344463377`*^9}, {
+   3.5723768551939077`*^9, 3.572376868091242*^9}, {3.57237702138356*^9, 
+   3.572377023180813*^9}, {3.579175531648699*^9, 3.579175564710289*^9}, {
+   3.579380733595738*^9, 3.579380739959736*^9}, 3.5793809334269*^9, {
+   3.579380972639751*^9, 3.5793810044213343`*^9}}]
 },
 WindowSize->{958, 628},
 WindowMargins->{{102, Automatic}, {Automatic, 37}},
@@ -84,7 +94,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 1787, 47, 131, "Input"]
+Cell[557, 20, 2601, 57, 131, "Input"]
 }
 ]
 *)
